@@ -9,5 +9,4 @@ class Chien(Animal):
         pass
 
     def __str__(self):
-        date_formatee = self.date_anniv.strftime("%d.%m.%Y")
-        return f"Je suis un chien du nom de {self.nom}, né le {date_formatee}"
+        return super().__str__("chien")
