@@ -43,6 +43,13 @@ class MyTestCase(unittest.TestCase):
         marley = Chien(ma_date, 'Marley')
         self.assertEqual("Je suis un chien du nom de Marley, né le 19.12.2023", marley.__str__())
 
+    def test_age_humain_0an_chien_trop_jeune_fonctionnel(self):
+        date_str = "10.05.2023"
+        date_format = "%d.%m.%Y"
+        ma_date = datetime.strptime(date_str, date_format)
+        marley = Chien(ma_date, 'Marley')
+        self.assertEqual("Trop jeune pour qu'on puisse estimer son âge", marley.age_humain())
+
     def test_age_humain_1an_age_chien_15ans_fonctionnel(self):
         date_str = "10.05.2022"
         date_format = "%d.%m.%Y"
@@ -85,6 +92,13 @@ class MyTestCase(unittest.TestCase):
         ma_date = datetime.strptime(date_str, date_format)
         marley = Chat(ma_date, 'Marley')
         self.assertEqual("Je suis un chat du nom de Marley, né le 19.12.2023", marley.__str__())
+
+    def test_age_humain_0an_chat_trop_jeune_fonctionnel(self):
+        date_str = "10.05.2023"
+        date_format = "%d.%m.%Y"
+        ma_date = datetime.strptime(date_str, date_format)
+        marley = Chat(ma_date, 'Marley')
+        self.assertEqual("Trop jeune pour qu'on puisse estimer son âge", marley.age_humain())
 
     def test_age_humain_1an_age_chat_15ans_fonctionnel(self):
         date_str = "10.05.2022"

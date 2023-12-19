@@ -12,6 +12,8 @@ class Chien(Animal):
 
     def age_humain(self):
         age = self.calculer_age()
+        # if age == 0:
+        #     return "Trop jeune pour qu'on puisse estimer son âge"
         if age == 1:
             return self.AGE_1AN
         elif age == 2:
