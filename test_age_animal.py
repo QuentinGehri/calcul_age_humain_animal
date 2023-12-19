@@ -64,6 +64,20 @@ class MyTestCase(unittest.TestCase):
         marley = Chien(ma_date, 'Marley')
         self.assertEqual(29, marley.age_humain())
 
+    def test_age_humain_5ans_age_chien_39ans_fonctionnel(self):
+        date_str = "10.05.2018"
+        date_format = "%d.%m.%Y"
+        ma_date = datetime.strptime(date_str, date_format)
+        marley = Chien(ma_date, 'Marley')
+        self.assertEqual(39, marley.age_humain())
+
+    def test_age_humain_10ans_age_chien_64ans_fonctionnel(self):
+        date_str = "10.05.2013"
+        date_format = "%d.%m.%Y"
+        ma_date = datetime.strptime(date_str, date_format)
+        marley = Chien(ma_date, 'Marley')
+        self.assertEqual(64, marley.age_humain())
+
     # Chat
     def test_str_chat_fonctionnel(self):
         date_str = "19.12.2023"

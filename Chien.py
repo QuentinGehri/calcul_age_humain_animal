@@ -16,6 +16,8 @@ class Chien(Animal):
             return self.AGE_1AN
         elif age == 2:
             return self.AGE_2AN
+        else:
+            return self.AGE_2AN + (self.AJOUT_AGE_APRES_2AN * (age - self.AGE_APRES_LEQUEL_ON_AJOUTE))
 
     def __str__(self):
         return super().__str__("chien")
