@@ -6,7 +6,11 @@ class Chat(Animal):
         super().__init__(date_anniv, nom)
 
     def age_humain(self):
-        pass
+        age = self.calculer_age()
+        if age == 1:
+            return 15
+        else:
+            return None
 
     def __str__(self):
         return super().__str__("chat")
