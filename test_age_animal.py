@@ -72,6 +72,20 @@ class MyTestCase(unittest.TestCase):
         marley = Chat(ma_date, 'Marley')
         self.assertEqual(28, marley.age_humain())
 
+    def test_age_humain_4an_age_chat_32ans_fonctionnel(self):
+        date_str = "10.05.2019"
+        date_format = "%d.%m.%Y"
+        ma_date = datetime.strptime(date_str, date_format)
+        marley = Chat(ma_date, 'Marley')
+        self.assertEqual(32, marley.age_humain())
+
+    def test_age_humain_10an_age_chat_56ans_fonctionnel(self):
+        date_str = "10.05.2013"
+        date_format = "%d.%m.%Y"
+        ma_date = datetime.strptime(date_str, date_format)
+        marley = Chat(ma_date, 'Marley')
+        self.assertEqual(56, marley.age_humain())
+
 
 if __name__ == '__main__':
     unittest.main()
