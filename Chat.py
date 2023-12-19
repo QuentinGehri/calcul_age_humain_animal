@@ -9,8 +9,10 @@ class Chat(Animal):
         age = self.calculer_age()
         if age == 1:
             return 15
-        else:
+        elif age == 2:
             return 24
+        else:
+            return 28
 
     def __str__(self):
         return super().__str__("chat")
