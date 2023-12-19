@@ -10,7 +10,7 @@ class Chat(Animal):
         if age == 1:
             return 15
         else:
-            return None
+            return 24
 
     def __str__(self):
         return super().__str__("chat")
