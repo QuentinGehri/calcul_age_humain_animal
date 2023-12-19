@@ -51,6 +51,13 @@ class MyTestCase(unittest.TestCase):
         marley = Chat(ma_date, 'Marley')
         self.assertEqual("Je suis un chat du nom de Marley, né le 19.12.2023", marley.__str__())
 
+    def test_age_humain_1an_age_chat_15ans_fonctionnel(self):
+        date_str = "10.05.2022"
+        date_format = "%d.%m.%Y"
+        ma_date = datetime.strptime(date_str, date_format)
+        marley = Chat(ma_date, 'Marley')
+        self.assertEqual(15, marley.age_humain())
+
 
 if __name__ == '__main__':
     unittest.main()
