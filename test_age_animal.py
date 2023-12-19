@@ -6,6 +6,7 @@ from Chat import Chat
 
 
 class MyTestCase(unittest.TestCase):
+    # Animal
     def test_str_animal_fonctionnel(self):
         date_str = "19.12.2023"
         date_format = "%d.%m.%Y"
@@ -13,6 +14,14 @@ class MyTestCase(unittest.TestCase):
         marley = Animal(ma_date, 'Marley')
         self.assertEqual("Je suis un animal du nom de Marley, né le 19.12.2023", marley.__str__())
 
+    def test_calculer_age_1an_animal(self):
+        date_str = "10.12.2022"
+        date_format = "%d.%m.%Y"
+        ma_date = datetime.strptime(date_str, date_format)
+        marley = Animal(ma_date, 'Marley')
+        self.assertEqual(1, marley.calculer_age())
+
+    # Chien
     def test_str_chien_fonctionnel(self):
         date_str = "19.12.2023"
         date_format = "%d.%m.%Y"
@@ -20,6 +29,7 @@ class MyTestCase(unittest.TestCase):
         marley = Chien(ma_date, 'Marley')
         self.assertEqual("Je suis un chien du nom de Marley, né le 19.12.2023", marley.__str__())
 
+    # Chat
     def test_str_chat_fonctionnel(self):
         date_str = "19.12.2023"
         date_format = "%d.%m.%Y"

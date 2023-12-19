@@ -3,6 +3,9 @@ class Animal:
         self.date_anniv = date_anniv
         self.nom = nom
 
+    def calculer_age(self):
+        pass
+
     def age_humain(self):
         pass
 
