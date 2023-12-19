@@ -3,6 +3,10 @@ class Animal:
         self.date_anniv = date_anniv
         self.nom = nom
 
+    def age_humain(self):
+        pass
+
     def __str__(self):
-        date_formatee = self.date_anniv.strftime("%d-%m-%Y")
+        date_formatee = self.date_anniv.strftime("%d.%m.%Y")
         return f"Je suis un animal du nom de {self.nom}, né le {date_formatee}"
+
