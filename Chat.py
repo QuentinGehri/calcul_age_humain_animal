@@ -1,5 +1,6 @@
 from Animal import Animal
 
+
 class Chat(Animal):
     def __init__(self, date_anniv, nom):
         super().__init__(date_anniv, nom)
@@ -8,4 +9,5 @@ class Chat(Animal):
         pass
 
     def __str__(self):
-        pass
+        return super().__str__("chat")
+    
