@@ -57,6 +57,13 @@ class MyTestCase(unittest.TestCase):
         marley = Chien(ma_date, 'Marley')
         self.assertEqual(24, marley.age_humain())
 
+    def test_age_humain_3ans_age_chien_29ans_fonctionnel(self):
+        date_str = "10.05.2020"
+        date_format = "%d.%m.%Y"
+        ma_date = datetime.strptime(date_str, date_format)
+        marley = Chien(ma_date, 'Marley')
+        self.assertEqual(29, marley.age_humain())
+
     # Chat
     def test_str_chat_fonctionnel(self):
         date_str = "19.12.2023"
