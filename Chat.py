@@ -10,10 +10,10 @@ class Chat(Animal):
     def __init__(self, date_anniv, nom):
         super().__init__(date_anniv, nom)
 
-    def age_humain(self,):
+    def age_humain(self):
         age = self.calculer_age()
-        # if age == 0:
-        #     return "Trop jeune pour qu'on puisse estimer son âge"
+        if age == 0:
+            return "Trop jeune pour qu'on puisse estimer son âge"
         if age == 1:
             return self.AGE_1AN
         elif age == 2:
@@ -23,4 +23,3 @@ class Chat(Animal):
 
     def __str__(self):
         return super().__str__("chat")
-    
