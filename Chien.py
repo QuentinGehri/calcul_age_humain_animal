@@ -14,6 +14,8 @@ class Chien(Animal):
         age = self.calculer_age()
         if age == 1:
             return self.AGE_1AN
+        elif age == 2:
+            return self.AGE_2AN
 
     def __str__(self):
         return super().__str__("chien")
